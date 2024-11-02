@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Center the main container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Style for the main date picker container */
+.date-range-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation styling for month and year */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.navigation button {
+  margin: 0 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Calendar grid layout */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* General button styling for dates */
+.calendar-grid button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for weekdays and weekends */
+.weekday {
+  background-color: #f0f8ff;
+  color: #000;
+}
+
+.weekend {
+  background-color: #f8d7da;
+  color: #6c757d;
+}
+
+/* Styling for selected dates within the range */
+.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hover effect for calendar buttons */
+.calendar-grid button:hover {
+  background-color: #cce5ff;
+}
+
+/* Style for the day name */
+.day-name {
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
 }
