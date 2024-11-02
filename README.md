@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+**Weekday Date Range Picker**
+A date range picker component built with React and TypeScript that allows users to select only weekdays as the start and end dates. The component prevents users from selecting weekends and highlights weekdays within the selected date range. It also includes features like month/year navigation and predefined date ranges for easy selection.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Features**
+Weekday-Only Selection: Users can only select weekdays (Monday through Friday) for the start and end dates of the range.
+Weekend Restriction: Weekends (Saturday and Sunday) are visually differentiated and cannot be selected.
+Date Range Highlighting: The selected date range highlights only weekdays, with weekends excluded from the highlight.
+Month and Year Navigation: Users can change the month and year displayed in the date picker.
+Predefined Date Ranges: Includes predefined ranges, such as "Last 7 Days" and "Last 30 Days" for quick selection.
+Day Name Display: Each date displays the weekday name (e.g., Mon, Tue) for easy identification.
 
-## Available Scripts
+**Installation**
+To run this project locally, follow these steps:
 
-In the project directory, you can run:
+1. Clone the Repository:
+git clone https://github.com/yourusername/weekday-date-range-picker.git
 
-### `npm start`
+2. Navigate to the Project Directory:
+cd weekday-date-range-picker
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Install Dependencies: Make sure you have Node.js installed, then run:
+npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. Run the Application: Start the development server with:
+npm start
 
-### `npm test`
+The application will be available at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Usage**
+After starting the application:
 
-### `npm run build`
+Select a Start Date and an End Date:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Click on a weekday to set it as the start date.
+Click another weekday to set it as the end date.
+View the Selected Range and Weekends:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The component highlights the selected range of weekdays.
+Any weekends within the selected range are detected and logged to the console.
+Change Month and Year:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use the "Previous Month" and "Next Month" buttons to navigate between months.
+Use the year dropdown to change the displayed year.
 
-### `npm run eject`
+**Code Overview**
+**Main Files**
+src/components/WeekdayDateRangePicker.tsx: The main component file, containing all logic for date selection, weekend restrictions, and month/year navigation.
+src/styles/index.css: The CSS file for styling the component, including visual differentiation of weekdays and weekends.
+src/App.tsx: The main application file where the WeekdayDateRangePicker component is rendered and tested.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Key Functions**
+handleDateClick: Manages the selection of the start and end dates, ensuring only weekdays are selected.
+incrementMonth / decrementMonth: Allows users to navigate between months.
+handleYearChange: Handles the selection of a different year.
+getWeekendDatesInRange: Identifies weekends within a selected range.
+onChange Handler: Logs the selected date range and any weekends within that range.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Testing the Change Handler**
+The onChange handler logs two pieces of information to the console when a date range is selected:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Selected Date Range: An array with the start and end dates in YYYY-MM-DD format.
+Weekend Dates: An array of weekend dates within the selected range.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**To test this:**
 
-## Learn More
+Open the Developer Console in your browser.
+Select a start and end date within the component.
+Verify that the console displays the selected range and any weekends in that range.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Technologies Used**
+React: For building the UI.
+TypeScript: For type safety and better code organization.
+CSS: For styling the component.
