@@ -75,6 +75,12 @@ Open the Developer Console in your browser.
 Select a start and end date within the component.
 Verify that the console displays the selected range and any weekends in that range.
 
+
+![Output_of_selected_dates-2](https://github.com/user-attachments/assets/3e2dd5f2-a55d-4cec-ac43-5037a9f30eed)
+![Output_of_selected_dates-1](https://github.com/user-attachments/assets/77f8b021-1b79-45ec-8bea-94cceb04e7a9)
+![Main_Output](https://github.com/user-attachments/assets/d230bc4b-349e-476d-9f55-7f043e9d3e29)
+
+
 **Technologies Used**
 
 React: For building the UI.
