@@ -1,4 +1,4 @@
-**Weekday Date Range Picker**
+# Weekday Date Range Picker
 
 A date range picker component built with React and TypeScript that allows users to select only weekdays as the start and end dates. The component prevents users from selecting weekends and highlights weekdays within the selected date range. It also includes features like month/year navigation and predefined date ranges for easy selection.
 
@@ -16,7 +16,7 @@ Day Name Display: Each date displays the weekday name (e.g., Mon, Tue) for easy 
 To run this project locally, follow these steps:
 
 1. Clone the Repository:
-git clone https://github.com/yourusername/weekday-date-range-picker.git
+git clone https://github.com/yeshgrad10/weekday-date-range-picker.git
 
 2. Navigate to the Project Directory:
 cd weekday-date-range-picker
